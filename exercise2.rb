@@ -2,29 +2,33 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-# create Fibonacci sequence class
-# create method to create the fibonacci sequence up to 4 million.
-# create a method to find even values and sum them.
+# create Fibonacci metho to list fibonacci number
+# add fibo numbers to an array
+# find the sum of all even fibo numbers less than 4mil
 
-class Fibonacci
+	def fibo(n)
+		return n if n < 2
+	  fib = [1,2]
+		n.times do
+			fib << fib[-1] + fib[-2]
+		end	
+		return fib.last
+	end
+
+	# puts fibo(31)
 
 	max = 4_000_000_000
+	i = 1
+  sum = 0
 
-	def fibo(num)
-		num.times.each_with_object([1,2]) {|num, a| a << a[-2] + a[-1]}
-	end
-	# need to implment properly
-	# while {a[-2] + a[-1] < max} 
-
-	def sum_of_fibo
-		a = fibo(num)
-		a.each {|x| sum += x if x % 2 == 0 }
+	while((x = fibo(i)) < max)
+	  sum += x if x % 2 == 0
+	  i += 1
 	end
 
-end
+	puts sum
 
-f = Fibonacci.new
-puts f.fibo(30)
+
 
 
 
