@@ -11,25 +11,26 @@
 class Multiples
 
 	def multi_pulls
-		numbers = Array(1...1000)
-		multi_pulls = []
-		for i in numbers 
-			if i % 3 == 0 || i % 5 == 0
-				multi_pulls << i
+	# set range variable 1..1000
+		numbers = Array(1...1000) # inclusive range
+		multi_pulls = [] # create a new array
+		for i in numbers  # loop that runs through every number in the array
+			if i % 3 == 0 || i % 5 == 0 # finds only numbers in array that are multiples of 3 and 5
+				multi_pulls << i # add those multiples to the new array
 			end
 		end
-		multi_pulls
+		multi_pulls # puts final multiple array 
 	end
 
-	def sum_of_multiples(multi_pulls)
-		sum = 0
-		multi_pulls.each {|i| sum += i }
-		puts sum
+	def sum_of_multiples(multi_pulls) # method to find the sum of the multipes array
+		sum = 0 # create sum variable
+		multi_pulls.each {|i| sum += i } # formula to take each number in array and add to sum variable, which creates the sum of multiples.
+		puts sum # returns the sum
 	end
 end
 
-m = Multiples.new
-m.sum_of_multiples(m.multi_pulls)
+m = Multiples.new # create a new class
+m.sum_of_multiples(m.multi_pulls) # calls the sum of the multiples
 
 
 
