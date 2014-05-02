@@ -5,15 +5,13 @@
 # find out which numbers in range are number.prime?
 # print the last prime
 
-require 'prime' # include the prime library to use prime?
-
+require 'prime' # include the prime library to use prime? or prime_division
 
 def prime_factor(num) # create method to find factors of num and if they are prime
 
-	1.upto(num) do |i| # create the first number 1...600851475143
-		(num / i) if i.prime? && num % i == 0  #
-    i += 1 # increase num in array by 1
-	end
+	primes = num.prime_division # use the method to find divisible primes 
+	largest = primes.last # find the largest primes in a array [6857,1]
+	largest[0] # return the largest number out of the array.
 
 end
 
