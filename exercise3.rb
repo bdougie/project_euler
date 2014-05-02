@@ -15,5 +15,5 @@ def prime_factor(num) # create method to find factors of num and if they are pri
 
 end
 
-p prime_factor(600851475143) # use methof to find prime of num
+p prime_factor(600851475143) # use method to find prime of num
 
