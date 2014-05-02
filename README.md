@@ -1,3 +1,3 @@
 # Project Euler
 
-Top secret project penfding astonaut review
+Top secret project pending astonaut review
